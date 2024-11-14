@@ -1,0 +1,108 @@
+/* Navbar Container */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 20px;
+  position: relative;
+}
+
+/* Logo Container */
+.logo img {
+  height: 50px; /* Adjust as necessary */
+  width: auto;
+  display: block;
+}
+
+/* Centered Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  transition: color 0.3s;
+  font-family: "Roboto", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.nav-links li a:hover {
+  color: #007bff;
+}
+
+/* Left Side Button */
+.left-button .demo-button {
+  padding: 8px 16px;
+  background: transparent;
+  color: #000000;
+  border-radius: 2rem;
+  border: none;
+  box-shadow: 1px 1px 10px black;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.left-button .demo-button:hover {
+  background-color: #0056b3;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  transition: 0.3s;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .logo img {
+    margin-left: 0;
+  }
+  /* Hide nav-links initially */
+  .nav-links {
+    display: none;
+  }
+
+  /* Left Button always visible on mobile */
+  .left-button {
+    display: flex;
+    margin: auto; /* Ensures it stays left-aligned */
+  }
+
+  /* Show hamburger icon on mobile */
+  .hamburger {
+    display: flex;
+    margin-left: auto; /* Ensures it stays right-aligned */
+  }
+
+  /* Show nav-links when menu is active */
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    gap: 10px;
+  }
+
+  .nav-links.active li {
+    text-align: center;
+  }
+}
