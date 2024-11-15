@@ -74,12 +74,19 @@
 }
 
 /* Image Styling within Slide */
+.mySwiper .swiper-slide a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit; /* Inherit border-radius from the slide */
+}
+
 .mySwiper .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 15px;
+  border-radius: inherit; /* Inherit border-radius from the slide */
   transition: transform 0.3s ease;
 }
 
@@ -99,8 +106,10 @@
   opacity: 1;
 }
 
-/* Swiper Autoplay Pause on Hover */
-.mySwiper:hover .swiper-slide {
+/* Link Styling */
+.mySwiper .swiper-slide a {
+  text-decoration: none; /* Remove underline from the link */
+  color: inherit; /* Inherit color to avoid text color change */
 }
 
 /* Small devices (landscape phones, 576px and below) */

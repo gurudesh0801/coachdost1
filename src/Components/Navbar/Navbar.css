@@ -10,8 +10,9 @@
 /* Logo Container */
 .logo img {
   height: 50px; /* Adjust as necessary */
-  width: auto;
-  display: block;
+  width: 10rem;
+  display: flex;
+  margin-left: -1rem;
 }
 
 /* Centered Navigation Links */
@@ -42,13 +43,15 @@
   color: #000000;
   border-radius: 2rem;
   border: none;
-  box-shadow: 1px 1px 10px black;
+  box-shadow: 0px 0px 10px black;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .left-button .demo-button:hover {
-  background-color: #0056b3;
+  background-color: #cacaca;
+  color: #000000;
+  transition: all 0.5s ease-out;
 }
 
 /* Hamburger Icon */
@@ -68,9 +71,6 @@
 
 /* Responsive Styling */
 @media (max-width: 768px) {
-  .logo img {
-    margin-left: 0;
-  }
   /* Hide nav-links initially */
   .nav-links {
     display: none;
