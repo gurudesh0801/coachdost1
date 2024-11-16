@@ -2,7 +2,7 @@
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 10px 20px;
   position: relative;
 }
@@ -19,6 +19,8 @@
 .nav-links {
   list-style: none;
   display: flex;
+  margin-left: auto;
+  margin-right: 2rem;
   gap: 20px;
 }
 
@@ -38,12 +40,12 @@
 
 /* Left Side Button */
 .left-button .demo-button {
-  padding: 8px 16px;
-  background: transparent;
-  color: #000000;
-  border-radius: 2rem;
+  padding: 10px 20px;
+  margin-right: 1rem;
+  background: #524ca8;
+  color: #ffffff;
+  border-radius: 5px;
   border: none;
-  box-shadow: 0px 0px 10px black;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -55,54 +57,129 @@
 }
 
 /* Hamburger Icon */
+/* Hamburger Icon */
 .hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
+  position: relative;
+  z-index: 20; /* Ensures it stays above other elements */
+  transition: transform 0.3s ease;
 }
 
 .hamburger .bar {
   width: 25px;
   height: 3px;
   background-color: #333;
-  transition: 0.3s;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Active state: Transform the bars */
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0; /* Middle bar disappears */
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 /* Responsive Styling */
+/* Responsive Styling */
+
+/* For larger screens (768px and below) */
 @media (max-width: 768px) {
-  /* Hide nav-links initially */
+  /* Hide desktop layout */
   .nav-links {
     display: none;
   }
 
-  /* Left Button always visible on mobile */
-  .left-button {
-    display: flex;
-    margin: auto; /* Ensures it stays left-aligned */
-  }
-
-  /* Show hamburger icon on mobile */
+  /* Adjust the hamburger menu */
   .hamburger {
     display: flex;
-    margin-left: auto; /* Ensures it stays right-aligned */
+    margin-left: auto;
   }
 
-  /* Show nav-links when menu is active */
+  .hamburger .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+  }
+
+  /* When active, show the nav links in a dropdown */
   .nav-links.active {
     display: flex;
     flex-direction: column;
+    align-items: center;
     position: absolute;
     top: 60px;
     left: 0;
     width: 100%;
-    background-color: #fff;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 10px 0;
-    gap: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    gap: 15px;
+    z-index: 10; /* Ensures it overlays content */
   }
 
+  /* Center-align the links */
   .nav-links.active li {
+    width: 100%;
     text-align: center;
+  }
+
+  .nav-links.active li a {
+    padding: 10px 0;
+    width: 100%;
+    display: block;
+    color: #333;
+    font-size: 1.1rem; /* Slightly larger text for touch screens */
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .nav-links.active li a:hover {
+    transition: 1s;
+    background-color: #f0f0f0;
+    color: #007bff;
+  }
+
+  /* Ensure left button stays visible */
+  .left-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .left-button .demo-button {
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+}
+
+/* For smaller screens (576px and below) */
+@media (max-width: 576px) {
+  .logo img {
+    height: 40px; /* Reduce logo size */
+    width: auto; /* Keep proportions */
+  }
+
+  .hamburger .bar {
+    width: 25px;
+    height: 2px;
+  }
+
+  .nav-links.active li a {
+    font-size: 1rem; /* Slightly smaller text */
+  }
+
+  .left-button .demo-button {
+    padding: 6px 12px;
+    font-size: 0.9rem; /* Reduce button size */
   }
 }

@@ -1,0 +1,127 @@
+/* Original CSS */
+.features-grid {
+  text-align: center;
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+  background-color: #fff;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.features-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.grid1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 20px;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  height: 15rem;
+  padding: 20px;
+  background: #f9f9f9;
+  border: 1px solid #333;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  margin: 0 auto 10px;
+}
+
+.grid-item h3 {
+  font-size: 2rem;
+  margin: auto;
+}
+
+.grid-item p {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.grid-item.highlighted p {
+  color: #fff;
+}
+
+.grid-item:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: #524ca8;
+  color: #f9f9f9;
+}
+
+/* Ensuring text inside the grid item is white on hover */
+.grid-item:hover h3,
+.grid-item:hover p {
+  color: #ffffff;
+}
+.grid-item:hover .icon-circle {
+  background: #ffffff;
+}
+/* Responsive CSS */
+
+/* Medium screens (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .grid1 {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+  }
+
+  .features-heading {
+    font-size: 1.8rem;
+  }
+
+  .grid-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .grid-item p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .grid1 {
+    grid-template-columns: 1fr; /* 1 column on small screens */
+    gap: 15px;
+  }
+
+  .features-heading {
+    font-size: 1.6rem;
+  }
+
+  .grid-item h3 {
+    font-size: 1rem;
+  }
+
+  .grid-item p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Very small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .features-heading {
+    font-size: 1.5rem; /* Further reduce font size for very small screens */
+  }
+
+  .grid-item h3 {
+    font-size: 0.9rem; /* Smaller heading on extra small screens */
+  }
+
+  .grid-item p {
+    font-size: 0.7rem; /* Smaller text for extra small screens */
+  }
+}

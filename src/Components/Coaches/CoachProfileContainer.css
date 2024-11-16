@@ -1,125 +1,39 @@
-/* Base Container */
+/* Base container */
 .coach-profile-container {
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  max-width: 1200px;
+  flex-direction: column; /* Stack elements vertically for smaller screens */
+  align-items: center;
+  justify-content: center;
   margin: auto;
-  background: #f5f5f5;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  max-width: 1200px; /* Maintain the max width for large screens */
+  padding: 10px; /* Add some padding for spacing */
 }
 
-/* Main Profile Content */
-.main-profile {
-  flex: 2;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.profile-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.profile-image {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-.profile-details p {
-  font-size: 1rem;
-  margin-bottom: 10px;
-}
-
-.profile-details button {
-  margin: 5px;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  background-color: #0073e6;
-  color: white;
-  cursor: pointer;
-}
-
-.reply-button {
-  margin-top: 15px;
-  padding: 10px 20px;
-  background-color: #0073e6;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* Responsive Design */
-
-/* Large screens */
+/* Large screens (1200px and below) */
 @media (max-width: 1200px) {
-  .coach-profile-container {
-    max-width: 1000px;
-  }
-
-  .profile-image {
-    max-width: 350px;
+  .coach-profile-container img {
+    width: 50rem; /* Scale down the image for large screens */
   }
 }
 
-/* Medium screens */
+/* Medium screens (992px and below) */
 @media (max-width: 992px) {
-  .coach-profile-container {
-    max-width: 750px;
-  }
-
-  .profile-image {
-    max-width: 300px;
+  .coach-profile-container img {
+    width: 40rem; /* Further reduce the image width */
   }
 }
 
-/* Tablet screens */
+/* Tablet screens (768px and below) */
 @media (max-width: 768px) {
-  .coach-profile-container {
-    flex-direction: column;
-  }
-
-  .main-profile {
-    padding: 15px;
-    width: 100%;
-  }
-
-  .profile-image {
-    max-width: 250px;
-  }
-
-  .profile-details p {
-    font-size: 0.9rem;
-  }
-
-  .profile-details button,
-  .reply-button {
-    padding: 8px 12px;
+  .coach-profile-container img {
+    width: 30rem; /* Adjust image size for tablets */
   }
 }
 
-/* Small screens */
+/* Mobile screens (576px and below) */
 @media (max-width: 576px) {
-  .profile-image {
-    max-width: 200px;
-  }
-
-  .profile-details p {
-    font-size: 0.85rem;
-  }
-
-  .profile-details button,
-  .reply-button {
-    padding: 6px 10px;
-    font-size: 0.9rem;
+  .coach-profile-container img {
+    width: 20rem; /* Resize image for mobile screens */
+    height: auto; /* Maintain aspect ratio */
   }
 }

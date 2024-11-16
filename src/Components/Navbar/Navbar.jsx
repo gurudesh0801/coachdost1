@@ -8,7 +8,14 @@ function Navbar() {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    const hamburger = document.querySelector(".hamburger");
+
+    // Toggle the active class on click
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+    });
   };
+  // Select the hamburger element
 
   return (
     <nav className="navbar">
@@ -44,11 +51,15 @@ function Navbar() {
         </li>
       </ul>
       <div className="left-button">
-        <button className="demo-button">Get Demo</button>
+        <button className="demo-button">Login</button>
+        <button className="demo-button">Sign Up</button>
       </div>
 
       {/* Hamburger Icon */}
-      <div className="hamburger" onClick={toggleMenu}>
+      <div
+        className={`hamburger ${isMenuOpen ? "active" : ""}`}
+        onClick={toggleMenu}
+      >
         <span className="bar"></span>
         <span className="bar"></span>
         <span className="bar"></span>

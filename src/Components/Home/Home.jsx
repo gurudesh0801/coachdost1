@@ -13,6 +13,9 @@ import img5 from "../../assets/images/slider_img5.jpg";
 import img6 from "../../assets/images/slider_img6.jpg";
 import img7 from "../../assets/images/slider_img7.jpg";
 import "./Home.css";
+import CoachProfileContainer from "../Coaches/CoachProfileContainer";
+import Tab from "../Tab/Tab";
+import FeaturesGrid from "../FeaturesGrid/FeaturesGrid";
 
 const Home = () => {
   const coaches = [
@@ -30,46 +33,52 @@ const Home = () => {
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: "auto",
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: true,
-    },
+    // autoplay: {
+    //   delay: 2000,
+    //   disableOnInteraction: true,
+    // },
     coverflowEffect: {
-      rotate: 50,
-      stretch: 0,
-      depth: 100,
-      modifier: 4,
-      slideShadows: true,
+      rotate: 50, // Reduce rotation for subtle bending
+      stretch: 0, // Neutral stretch to avoid affecting the center
+      depth: 100, // Slight depth for better perspective on edges
+      modifier: 4, // Controls how much the effect is visible
+      slideShadows: true, // Keep shadows for a 3D look
     },
+    initialSlide: Math.floor(coaches.length / 2),
     modules: [EffectCoverflow, Pagination, Autoplay],
   };
 
   return (
-    <section className="hero-section">
-      <div className="hero-text">
-        <div className="texts">
-          <h1>
-            <span className="coach">COACH</span>
-            <span className="dost">DOST</span>
-          </h1>
-          <p>
-            Transform Your Life With Personalised Coaching And Valuable Guidance
-          </p>
+    <>
+      <section className="hero-section">
+        <div className="hero-text">
+          <div className="texts">
+            <h1>
+              <span className="coach">COACH</span>
+              <span className="dost">DOST</span>
+            </h1>
+            <p>
+              Transform Your Life With Personalised Coaching And Valuable
+              Guidance
+            </p>
+          </div>
         </div>
-      </div>
-      <div className="container">
-        <h1 className="heading">Coaches</h1>
-        <Swiper {...swiperSettings} className="mySwiper">
-          {coaches.map((coach) => (
-            <SwiperSlide key={coach.id}>
-              <Link to={`/coaches/${coach.id}`}>
-                <img src={coach.img} alt={coach.name} />
-              </Link>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-    </section>
+        <div className="cylindrical-container">
+          <Swiper {...swiperSettings} className="mySwiper">
+            {coaches.map((coach) => (
+              <SwiperSlide key={coach.id}>
+                <Link to={`/coaches/${coach.id}`}>
+                  <img src={coach.img} alt={coach.name} />
+                </Link>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </section>
+      <CoachProfileContainer />
+      <Tab />
+      <FeaturesGrid />
+    </>
   );
 };
 

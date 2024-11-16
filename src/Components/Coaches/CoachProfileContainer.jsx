@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CoachSidebar from "./CoachSidebar";
 import "./CoachProfileContainer.css";
-import img1 from "../../assets/images/slider_img1.jpg";
+import img1 from "../../assets/images/img2.png";
 import img2 from "../../assets/images/slider_img2.jpg";
 import img3 from "../../assets/images/slider_img3.jpg";
 import img4 from "../../assets/images/slider_img4.jpg";
@@ -29,23 +29,10 @@ export default function CoachProfileContainer() {
   const [selectedCoach, setSelectedCoach] = useState(coaches[0]);
 
   return (
-    <div className="coach-profile-container">
-      <CoachSidebar coaches={coaches} setSelectedCoach={setSelectedCoach} />
-      <div className="main-profile">
-        <div className="profile-content">
-          <img
-            src={selectedCoach.img}
-            alt={selectedCoach.name}
-            className="profile-image"
-          />
-          <div className="profile-details">
-            <p>example@gmail.com</p>
-            <button>Portfolio</button>
-            <button>CV</button>
-          </div>
-        </div>
-        <button className="reply-button">Reply</button>
+    <>
+      <div className="coach-profile-container">
+        <img src={img1} alt="" />
       </div>
-    </div>
+    </>
   );
 }

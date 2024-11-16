@@ -1,0 +1,190 @@
+.course-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1500px;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 5rem auto;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.course-content {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.card-image {
+  width: 50rem;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.card-info h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.card-info p {
+  margin: 5px 0 0;
+  color: #777;
+}
+.description {
+  margin: auto;
+}
+.description h1 {
+  margin: 0;
+  font-size: 3rem;
+  color: #4f46e5;
+}
+
+.description p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.btn.join {
+  background-color: #4f46e5;
+  color: white;
+}
+
+.btn.read-more {
+  background-color: transparent;
+  border: 1px solid #4f46e5;
+  color: #4f46e5;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+/* Responsive Breakpoints */
+
+/* Large Screens (1200px and below) */
+@media (max-width: 1200px) {
+  .course-content {
+    gap: 15px; /* Reduce gap between cards */
+  }
+
+  .card {
+    flex: 1 1 45%; /* Cards take up 45% of the row */
+    max-width: 600px; /* Adjust maximum width for cards */
+  }
+
+  .card-image {
+    width: 100%; /* Ensure images are responsive */
+  }
+
+  .description h1 {
+    font-size: 2.5rem; /* Slightly smaller heading */
+  }
+}
+
+/* Medium Screens (992px and below) */
+@media (max-width: 992px) {
+  .course-content {
+    flex-wrap: wrap; /* Wrap cards to the next line */
+    justify-content: center; /* Center cards within the container */
+  }
+
+  .card {
+    flex: 1 1 100%; /* Cards stack vertically */
+    max-width: 100%; /* Take up full width */
+  }
+
+  .card-image {
+    height: auto; /* Adjust height for better proportions */
+  }
+
+  .description h1 {
+    font-size: 2rem; /* Reduce heading size further */
+  }
+
+  .description p {
+    font-size: 0.95rem; /* Adjust paragraph size */
+  }
+}
+
+/* Tablet Screens (768px and below) */
+@media (max-width: 768px) {
+  .course-card {
+    padding: 20px; /* Reduce padding */
+  }
+
+  .description h1 {
+    font-size: 1.8rem; /* Smaller heading */
+  }
+
+  .description p {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px 15px; /* Adjust button padding */
+  }
+}
+
+/* Small Screens (576px and below) */
+@media (max-width: 576px) {
+  .course-card {
+    padding: 15px; /* Further reduce padding */
+  }
+
+  .description {
+    text-align: center; /* Center text for smaller screens */
+  }
+
+  .description h1 {
+    font-size: 1.5rem; /* Smaller heading for mobile */
+  }
+
+  .description p {
+    font-size: 0.85rem;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+    padding: 6px 10px; /* Compact buttons for mobile */
+  }
+
+  .card {
+    margin: 10px 0; /* Add margin between stacked cards */
+  }
+
+  .card-image {
+    width: 100%; /* Full width for smaller screens */
+    height: 200px; /* Consistent height for images */
+    object-fit: cover;
+  }
+  .actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
