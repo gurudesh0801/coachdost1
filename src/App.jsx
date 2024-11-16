@@ -5,6 +5,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import "./App.css";
 import Home from "./Components/Home/Home";
 import CoachProfileContainer from "./Components/Coaches/CoachProfileContainer";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/coaches/:id" element={<CoachProfileContainer />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

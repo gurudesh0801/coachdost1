@@ -1,0 +1,123 @@
+/* General Styling */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.footer {
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+.subscribe-section {
+  background-color: #4f46e5;
+  padding: 10rem 10rem;
+}
+
+/* Subscribe Section */
+.subscribe-section h2 {
+  font-size: 3rem;
+  margin: auto;
+}
+
+.subscribe-section p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.subscribe-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.subscribe-form input {
+  padding: 10px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  width: 250px;
+  max-width: 100%;
+}
+
+.subscribe-form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  background-color: white;
+  color: #4f46e5;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.subscribe-form button:hover {
+  background-color: #ececec;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-button {
+  background-color: #4f46e5;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.contact-button:hover {
+  background-color: #ffffff;
+  color: #524ca8;
+}
+
+.footer-text h3 {
+  font-size: 2rem;
+  color: #524ca8;
+}
+
+.footer-text p {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.footer-links {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #524ca8;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .subscribe-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .subscribe-form input {
+    width: 200px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
