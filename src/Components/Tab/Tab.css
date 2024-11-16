@@ -136,6 +136,9 @@
   .course-card {
     padding: 20px; /* Reduce padding */
   }
+  .description {
+    text-align: center; /* Center text for smaller screens */
+  }
 
   .description h1 {
     font-size: 1.8rem; /* Smaller heading */
@@ -143,6 +146,11 @@
 
   .description p {
     font-size: 0.9rem;
+  }
+  .actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .btn {
