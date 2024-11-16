@@ -8,6 +8,11 @@
   max-width: 1200px; /* Maintain the max width for large screens */
   padding: 10px; /* Add some padding for spacing */
 }
+.coach-profile-container img {
+  border: 5px solid #626262;
+  box-shadow: 0 0 20px black;
+  border-radius: 10px;
+}
 
 /* Large screens (1200px and below) */
 @media (max-width: 1200px) {
