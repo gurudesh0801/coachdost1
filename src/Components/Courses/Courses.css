@@ -1,0 +1,174 @@
+.app {
+  text-align: center;
+  padding: 20px;
+}
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Tabs Section */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  gap: 20px;
+  flex-wrap: wrap; /* Allows tabs to wrap on smaller screens */
+}
+
+.tabs span {
+  font-size: 1rem;
+  padding: 8px 16px;
+  cursor: pointer;
+  color: #555;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.tabs span:hover {
+  color: #5851db;
+  border-bottom: 2px solid #5851db; /* Highlight effect on hover */
+}
+
+/* Courses Section */
+.courses {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.course-card1 {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.course-card1:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  background-color: #5851db; /* Change background color on hover */
+  color: #fff;
+}
+.course-card1:hover .read-more {
+  color: #fff;
+}
+
+.active-card {
+  background-color: #5851db;
+  color: #fff;
+}
+
+.active-card h2,
+.active-card p,
+.active-card .price {
+  color: #fff;
+}
+
+/* Icon Placeholder */
+.icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+/* Footer Section */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.read-more {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #5851db;
+  font-weight: bold;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+
+/* Small devices (max-width: 600px) */
+@media (max-width: 600px) {
+  .tabs {
+    gap: 10px;
+    font-size: 0.9rem;
+  }
+
+  .course-card {
+    padding: 15px;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  .price {
+    font-size: 1rem;
+  }
+}
+
+/* Medium devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .tabs {
+    justify-content: flex-start; /* Align tabs to the left for better UX */
+  }
+
+  .course-card {
+    padding: 18px;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+}
+
+/* Large devices (max-width: 992px) */
+@media (max-width: 992px) {
+  .courses {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+
+  .course-card {
+    padding: 20px;
+  }
+
+  .heading {
+    font-size: 2.2rem;
+  }
+}
+
+/* Extra large devices (min-width: 1200px) */
+@media (min-width: 1200px) {
+  .courses {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .course-card {
+    padding: 25px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .heading {
+    font-size: 2.5rem;
+  }
+}

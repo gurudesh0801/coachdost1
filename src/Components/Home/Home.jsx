@@ -17,6 +17,7 @@ import CoachProfileContainer from "../Coaches/CoachProfileContainer";
 import Tab from "../Tab/Tab";
 import FeaturesGrid from "../FeaturesGrid/FeaturesGrid";
 import SkillsPage from "../SkillsPage/SkillsPage";
+import Courses from "../Courses/Courses";
 
 const Home = () => {
   const coaches = [
@@ -79,6 +80,7 @@ const Home = () => {
       <CoachProfileContainer />
       <FeaturesGrid />
       <SkillsPage />
+      <Courses />
     </>
   );
 };
