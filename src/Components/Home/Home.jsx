@@ -16,6 +16,7 @@ import "./Home.css";
 import CoachProfileContainer from "../Coaches/CoachProfileContainer";
 import Tab from "../Tab/Tab";
 import FeaturesGrid from "../FeaturesGrid/FeaturesGrid";
+import SkillsPage from "../SkillsPage/SkillsPage";
 
 const Home = () => {
   const coaches = [
@@ -76,8 +77,8 @@ const Home = () => {
         </div>
       </section>
       <CoachProfileContainer />
-      <Tab />
       <FeaturesGrid />
+      <SkillsPage />
     </>
   );
 };

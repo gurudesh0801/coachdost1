@@ -1,10 +1,12 @@
 /* Base container */
 .coach-profile-container {
+  position: relative;
+  top: -15rem;
   display: flex;
   flex-direction: column; /* Stack elements vertically for smaller screens */
   align-items: center;
   justify-content: center;
-  margin: auto;
+  margin: -5rem auto;
   max-width: 1200px; /* Maintain the max width for large screens */
   padding: 10px; /* Add some padding for spacing */
 }
@@ -30,6 +32,9 @@
 
 /* Tablet screens (768px and below) */
 @media (max-width: 768px) {
+  .coach-profile-container {
+    margin-bottom: -10rem;
+  }
   .coach-profile-container img {
     width: 30rem; /* Adjust image size for tablets */
   }

@@ -8,6 +8,7 @@ import img4 from "../../assets/images/slider_img4.jpg";
 import img5 from "../../assets/images/slider_img5.jpg";
 import img6 from "../../assets/images/slider_img6.jpg";
 import img7 from "../../assets/images/slider_img7.jpg";
+import Tab from "../Tab/Tab";
 
 const coaches = [
   {
@@ -33,6 +34,7 @@ export default function CoachProfileContainer() {
       <div className="coach-profile-container">
         <img src={img1} alt="" />
       </div>
+      <Tab />
     </>
   );
 }
