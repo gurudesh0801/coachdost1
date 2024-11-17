@@ -36,18 +36,22 @@ const FeaturesGrid = () => {
   ];
 
   return (
-    <div className="features-grid">
-      <h2 className="features-heading">Why CoachDost?</h2>
-      <div className="grid1">
-        {features.map((feature, index) => (
-          <div key={index} className={`grid-item`}>
-            <div className="icon-circle"></div>
-            <h3>{feature.title}</h3>
-            <p>{feature.description}</p>
+    <>
+      <section id="why">
+        <div className="features-grid" id="#why">
+          <h2 className="features-heading">Why CoachDost?</h2>
+          <div className="grid1">
+            {features.map((feature, index) => (
+              <div key={index} className={`grid-item`}>
+                <div className="icon-circle"></div>
+                <h3>{feature.title}</h3>
+                <p>{feature.description}</p>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-    </div>
+        </div>
+      </section>
+    </>
   );
 };
 

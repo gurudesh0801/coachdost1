@@ -79,6 +79,7 @@ const Home = () => {
         </div>
       </section>
       <CoachProfileContainer />
+      <Tab />
       <FeaturesGrid />
       <SkillsPage />
       <Courses />

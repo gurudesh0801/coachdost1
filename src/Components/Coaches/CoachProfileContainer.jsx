@@ -34,7 +34,6 @@ export default function CoachProfileContainer() {
       <div className="coach-profile-container">
         <img src={img1} alt="" />
       </div>
-      <Tab />
     </>
   );
 }
