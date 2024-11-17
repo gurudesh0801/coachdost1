@@ -6,7 +6,7 @@ const StickyFooterBar = () => {
   return (
     <div className="sticky-footer-bar">
       <button className="footer-button1">
-        <i className="fas fa-search"></i> Search
+        <i className="fas fa-search"></i> <span>Search</span>
       </button>
       <button className="footer-button2">
         <i className="fas fa-phone-alt"></i> Contact
