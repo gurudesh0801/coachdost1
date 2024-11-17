@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import CoachSidebar from "./CoachSidebar";
 import "./CoachProfileContainer.css";
 import img1 from "../../assets/images/img2.png";
@@ -28,11 +28,41 @@ const coaches = [
 
 export default function CoachProfileContainer() {
   const [selectedCoach, setSelectedCoach] = useState(coaches[0]);
+  const imgRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.1 } // Trigger when 10% of the image is visible
+    );
+
+    if (imgRef.current) {
+      observer.observe(imgRef.current);
+    }
+
+    return () => {
+      if (imgRef.current) {
+        observer.unobserve(imgRef.current);
+      }
+    };
+  }, []);
 
   return (
     <>
       <div className="coach-profile-container">
-        <img src={img1} alt="" />
+        <img
+          src={img1}
+          alt=""
+          ref={imgRef}
+          className={isVisible ? "visible" : ""}
+        />
       </div>
     </>
   );

@@ -1,6 +1,8 @@
 .app {
   text-align: center;
   padding: 20px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .heading {
@@ -113,7 +115,7 @@
     font-size: 0.9rem;
   }
 
-  .course-card {
+  .course-card1 {
     padding: 15px;
   }
 
@@ -132,7 +134,7 @@
     justify-content: flex-start; /* Align tabs to the left for better UX */
   }
 
-  .course-card {
+  .course-card1 {
     padding: 18px;
   }
 
@@ -148,7 +150,7 @@
     gap: 15px;
   }
 
-  .course-card {
+  .course-card1 {
     padding: 20px;
   }
 
@@ -163,7 +165,7 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 
-  .course-card {
+  .course-card1 {
     padding: 25px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
   }

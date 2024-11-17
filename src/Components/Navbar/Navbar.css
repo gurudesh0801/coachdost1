@@ -12,7 +12,8 @@
   height: 50px; /* Adjust as necessary */
   width: 10rem;
   display: flex;
-  margin-left: -1rem;
+  margin-left: 0.4rem;
+  margin-top: 5px;
 }
 
 /* Centered Navigation Links */
@@ -95,6 +96,9 @@
 /* For larger screens (768px and below) */
 @media (max-width: 768px) {
   /* Hide desktop layout */
+  .logo img {
+    margin: 0;
+  }
   .nav-links {
     display: none;
   }
@@ -165,6 +169,7 @@
 /* For smaller screens (576px and below) */
 @media (max-width: 576px) {
   .logo img {
+    margin-left: 0;
     height: 40px; /* Reduce logo size */
     width: auto; /* Keep proportions */
   }

@@ -1,10 +1,11 @@
-.course-card {
+.course-card2 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 1500px;
+  max-width: 1200px;
   padding: 30px;
+  box-shadow: none;
   border-radius: 10px;
   margin: auto;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -13,24 +14,32 @@
 
 .course-content {
   display: flex;
+  align-items: center;
   flex-direction: row;
   gap: 20px;
 }
 
 .card {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  flex-direction: row; /* Ensure the image stays beside the content */
   align-items: center;
+  overflow: visible; /* Allow overflow for the image */
 }
 
 .card-image {
-  width: 50rem;
+  position: relative;
+  left: -40%; /* Move the image 30% off to the left */
+  width: 50rem; /* Maintain the image size */
   border-radius: 10px;
+  transform: translateX(-60%);
   object-fit: cover;
   box-shadow: 0 0 20px black;
+  transition: transform 1s ease-out, opacity 1s ease-out;
 }
-
+.card-image.slide-in {
+  transform: translateX(0%); /* Move into its original position */
+  left: -40%;
+}
 .card-info h3 {
   margin: 0;
   font-size: 1.5rem;
@@ -42,12 +51,15 @@
   color: #777;
 }
 .description {
-  margin: auto;
+  margin-left: -15rem;
+  width: 40%;
 }
 .description h1 {
   margin: 0;
-  font-size: 3rem;
-  color: #4f46e5;
+  font-size: 4rem;
+  color: #524ca8;
+  font-family: "LT Avocado";
+  line-height: 1;
 }
 
 .description p {
@@ -71,14 +83,14 @@
 }
 
 .btn.join {
-  background-color: #4f46e5;
+  background-color: #524ca8;
   color: white;
 }
 
 .btn.read-more {
   background-color: transparent;
-  border: 1px solid #4f46e5;
-  color: #4f46e5;
+  border: 1px solid #524ca8;
+  color: #524ca8;
 }
 
 .btn:hover {
@@ -93,59 +105,94 @@
   }
 
   .card {
-    flex: 1 1 45%; /* Cards take up 45% of the row */
-    max-width: 600px; /* Adjust maximum width for cards */
+    flex: 1 1 45%; /* Cards occupy 45% of the container */
+    max-width: 600px; /* Restrict maximum width */
   }
 
   .card-image {
+    left: -20%; /* Slightly adjust image offset */
     width: 100%; /* Ensure images are responsive */
   }
 
+  .description {
+    margin-left: -5rem; /* Adjust description alignment */
+    width: 50%; /* Increase description width for readability */
+  }
+
   .description h1 {
-    font-size: 2.5rem; /* Slightly smaller heading */
+    font-size: 2.2rem; /* Slightly smaller heading */
   }
 }
 
 /* Medium Screens (992px and below) */
 @media (max-width: 992px) {
   .course-content {
-    flex-wrap: wrap; /* Wrap cards to the next line */
-    justify-content: center; /* Center cards within the container */
+    flex-wrap: wrap; /* Wrap content to the next line */
+    justify-content: center; /* Center content */
   }
 
   .card {
-    flex: 1 1 100%; /* Cards stack vertically */
-    max-width: 100%; /* Take up full width */
+    flex: 1 1 100%; /* Cards take full width */
+    max-width: 100%; /* Remove max-width restriction */
   }
 
   .card-image {
-    height: auto; /* Adjust height for better proportions */
+    left: 0; /* Reset image offset */
+    width: 100%; /* Full width */
+  }
+
+  .description {
+    margin-left: 0; /* Center description */
+    text-align: center; /* Align text to center */
   }
 
   .description h1 {
-    font-size: 2rem; /* Reduce heading size further */
+    font-size: 2rem; /* Reduce heading size */
   }
 
   .description p {
     font-size: 0.95rem; /* Adjust paragraph size */
   }
+
+  .btn {
+    font-size: 0.9rem; /* Slightly smaller buttons */
+    padding: 8px 12px; /* Adjust button padding */
+  }
+  .actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 /* Tablet Screens (768px and below) */
 @media (max-width: 768px) {
-  .course-card {
+  .course-card2 {
     padding: 20px; /* Reduce padding */
   }
+
+  .card {
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center;
+  }
+
+  .card-image {
+    width: 100%; /* Full width for images */
+    height: auto; /* Adjust height for proportions */
+  }
+
   .description {
-    text-align: center; /* Center text for smaller screens */
+    margin: 0 auto; /* Center within container */
+    text-align: center; /* Center text alignment */
+    width: 100%; /* Full width */
   }
 
   .description h1 {
-    font-size: 1.8rem; /* Smaller heading */
+    font-size: 1.8rem; /* Reduce heading size */
   }
 
   .description p {
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Adjust paragraph size */
   }
   .actions {
     display: flex;
@@ -154,42 +201,46 @@
   }
 
   .btn {
-    font-size: 0.9rem;
-    padding: 8px 15px; /* Adjust button padding */
+    font-size: 0.85rem; /* Compact buttons */
+    padding: 7px 10px; /* Adjust button padding */
   }
 }
 
 /* Small Screens (576px and below) */
 @media (max-width: 576px) {
-  .course-card {
+  .course-card2 {
     padding: 15px; /* Further reduce padding */
   }
 
-  .description {
-    text-align: center; /* Center text for smaller screens */
-  }
-
-  .description h1 {
-    font-size: 1.5rem; /* Smaller heading for mobile */
-  }
-
-  .description p {
-    font-size: 0.85rem;
-  }
-
-  .btn {
-    font-size: 0.8rem;
-    padding: 6px 10px; /* Compact buttons for mobile */
-  }
-
   .card {
-    margin: 10px 0; /* Add margin between stacked cards */
+    flex-direction: column; /* Stack image and text */
+    margin: 10px 0; /* Add spacing between stacked cards */
   }
 
   .card-image {
-    width: 100%; /* Full width for smaller screens */
-    height: 200px; /* Consistent height for images */
-    object-fit: cover;
+    width: 100%; /* Full width for small screens */
+    height: 200px; /* Consistent height */
+    object-fit: cover; /* Ensure proper image fit */
+    left: 0; /* Reset left offset */
+  }
+
+  .description {
+    width: 100%; /* Full width */
+    margin: 0 auto; /* Center alignment */
+    text-align: center; /* Center text alignment */
+  }
+
+  .description h1 {
+    font-size: 1.5rem; /* Smaller heading */
+  }
+
+  .description p {
+    font-size: 0.85rem; /* Compact paragraph size */
+  }
+
+  .btn {
+    font-size: 0.8rem; /* Compact button font */
+    padding: 6px 10px; /* Smaller button padding */
   }
   .actions {
     display: flex;
