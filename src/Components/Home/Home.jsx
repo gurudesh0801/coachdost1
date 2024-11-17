@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
 import "swiper/css";
@@ -31,24 +31,34 @@ const Home = () => {
     { id: 7, img: img7, name: "Coach 7" },
   ];
 
+  const swiperRef = useRef(null);
+
   const swiperSettings = {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: "auto",
-    // autoplay: {
-    //   delay: 2000,
-    //   disableOnInteraction: true,
-    // },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: true,
+    },
     coverflowEffect: {
-      rotate: 50, // Reduce rotation for subtle bending
-      stretch: 0, // Neutral stretch to avoid affecting the center
-      depth: 100, // Slight depth for better perspective on edges
-      modifier: 4, // Controls how much the effect is visible
-      slideShadows: true, // Keep shadows for a 3D look
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 4,
+      slideShadows: true,
     },
     initialSlide: Math.floor(coaches.length / 2),
     modules: [EffectCoverflow, Pagination, Autoplay],
+  };
+
+  const handleMouseEnter = () => {
+    swiperRef.current?.autoplay.stop();
+  };
+
+  const handleMouseLeave = () => {
+    swiperRef.current?.autoplay.start();
   };
 
   return (
@@ -66,13 +76,15 @@ const Home = () => {
             </p>
           </div>
         </div>
-        <div className="cylindrical-container">
-          <Swiper {...swiperSettings} className="mySwiper">
+        <div
+          className="cylindrical-container"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
+          <Swiper {...swiperSettings} className="mySwiper" ref={swiperRef}>
             {coaches.map((coach) => (
               <SwiperSlide key={coach.id}>
-                <Link to={`/coaches/${coach.id}`}>
-                  <img src={coach.img} alt={coach.name} />
-                </Link>
+                <img src={coach.img} alt={coach.name} />
               </SwiperSlide>
             ))}
           </Swiper>
