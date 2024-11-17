@@ -39,7 +39,7 @@ const Home = () => {
     centeredSlides: true,
     slidesPerView: "auto",
     autoplay: {
-      delay: 3000,
+      delay: 2000,
       disableOnInteraction: true,
     },
     coverflowEffect: {
