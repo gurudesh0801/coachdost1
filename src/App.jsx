@@ -6,6 +6,7 @@ import "./App.css";
 import Home from "./Components/Home/Home";
 import CoachProfileContainer from "./Components/Coaches/CoachProfileContainer";
 import Footer from "./Components/Footer/Footer";
+import StickyFooterBar from "./Components/StickyFooterBar/StickyFooterBar";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/coaches/:id" element={<CoachProfileContainer />} />
       </Routes>
       <Footer />
+      <StickyFooterBar />
     </Router>
   );
 }

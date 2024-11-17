@@ -6,9 +6,10 @@
 }
 
 .heading {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 20px;
   color: #524ca8;
+  font-family: "LT Avocado";
 }
 
 /* Tabs Section */
@@ -41,13 +42,11 @@
   gap: 20px;
   padding: 0 20px;
 }
-.cheading {
-  color: #524ca8 !important;
-}
 
 .course-card1 {
   background: #fff;
   border-radius: 8px;
+  color: #524ca8;
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -60,7 +59,7 @@
   transform: translateY(-5px);
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
   background-color: #5851db; /* Change background color on hover */
-  color: #fff;
+  color: #ffffff;
 }
 .course-card1:hover .read-more {
   color: #fff;
@@ -74,7 +73,7 @@
 .active-card h2,
 .active-card p,
 .active-card .price {
-  color: #fff;
+  color: #ffffff;
 }
 
 /* Icon Placeholder */
@@ -172,9 +171,5 @@
   .course-card1 {
     padding: 25px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .heading {
-    font-size: 2.5rem;
   }
 }

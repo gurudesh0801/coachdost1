@@ -92,6 +92,105 @@
 
 /* Responsive Styling */
 /* Responsive Styling */
+/* For larger screens (1200px and above) */
+@media (min-width: 1200px) {
+  /* Navbar Container */
+  .navbar {
+    padding: 20px 40px; /* More padding for larger screens */
+  }
+
+  /* Logo Styling */
+  .logo img {
+    height: 60px; /* Larger logo size */
+    width: auto; /* Keep proportions */
+  }
+
+  /* Navigation Links */
+  .nav-links {
+    margin-left: auto;
+    margin-right: 2rem;
+    gap: 30px; /* Increased gap for large screens */
+  }
+
+  .nav-links li a {
+    font-size: 1.2rem; /* Slightly larger font for better readability */
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .nav-links li a:hover {
+    color: #007bff; /* Keep the same hover effect */
+  }
+
+  /* Left Button */
+  .left-button .demo-button {
+    padding: 12px 25px;
+    font-size: 1.1rem; /* Larger button text */
+  }
+
+  /* Hamburger Icon */
+  .hamburger {
+    display: none; /* Hide hamburger icon on large screens */
+  }
+
+  /* Ensure that when hovering over links, it looks clean and spacious */
+  .nav-links li a:hover {
+    background-color: transparent; /* Remove background color on hover */
+  }
+
+  /* Adjust the footer for large screens */
+  .footer {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-text h3 {
+    font-size: 2rem; /* Larger footer text */
+  }
+
+  .footer-links {
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .footer-links a {
+    font-size: 1rem; /* Larger font size for links in the footer */
+  }
+
+  .contact-button {
+    font-size: 1.1rem;
+  }
+}
+
+/* For screen sizes between 998px and 1024px */
+@media (max-width: 1024px) and (min-width: 998px) {
+  .subscribe-form {
+    flex-direction: row; /* Keep the input and button side by side */
+    justify-content: space-between; /* Add space between input and button */
+    gap: 15px; /* Moderate gap for spacing */
+  }
+
+  .subscribe-form input {
+    width: 90%; /* Allow input to take most of the space */
+    padding: 15px; /* Moderate padding for input */
+    font-size: 1rem; /* Standard font size */
+  }
+
+  .subscribe-form button {
+    width: 25%; /* Button takes less space */
+    padding: 12px 15px; /* Adjust padding */
+    font-size: 1rem; /* Maintain text visibility */
+    text-align: center; /* Center text inside the button */
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+}
 
 /* For larger screens (768px and below) */
 @media (max-width: 768px) {
@@ -99,6 +198,7 @@
   .logo img {
     margin: 0;
   }
+
   .nav-links {
     display: none;
   }
