@@ -18,7 +18,8 @@ body {
 
 /* Subscribe Section */
 .subscribe-section h2 {
-  font-size: 3rem;
+  font-family: "LT Avocado";
+  font-size: 3.5rem;
   margin: auto;
 }
 
@@ -32,22 +33,27 @@ body {
   justify-content: center;
   align-items: center;
   gap: 10px;
+  position: relative;
 }
 
 .subscribe-form input {
-  padding: 10px;
-  border-radius: 30px;
+  padding: 20px;
+  border-radius: 5px;
   border: none;
   outline: none;
-  width: 250px;
+  width: 30rem;
   max-width: 100%;
+  color: rgb(255, 255, 255);
+  background-color: #ffffff48;
 }
 
 .subscribe-form button {
-  padding: 10px 20px;
+  position: absolute;
+  right: 20rem;
+  padding: 13px 20px;
   border: none;
-  border-radius: 30px;
-  background-color: white;
+  border-radius: 5px;
+  background-color: #ffffff;
   color: #524ca8;
   cursor: pointer;
   font-weight: bold;
@@ -62,7 +68,7 @@ body {
   margin-top: 2rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .contact-button {
@@ -129,12 +135,13 @@ body {
   }
 
   .subscribe-form input {
-    width: 80%;
+    width: 90%; /* Adjust width for smaller screens */
   }
 
   .subscribe-form button {
-    width: 80%;
-    padding: 12px;
+    width: 30%; /* Match button width to input */
+    text-align: center; /* Center-align text inside the button */
+    right: 0;
   }
 
   .footer {
@@ -183,11 +190,15 @@ body {
   }
 
   .subscribe-form input {
-    width: 90%;
+    padding: 10px; /* Reduce padding for smaller screens */
+    font-size: 0.9rem; /* Adjust font size */
   }
 
   .subscribe-form button {
-    width: 90%;
+    width: 30%; /* Match button width to input */
+    padding: 10px;
+    text-align: center; /* Center-align text inside the button */
+    right: 0;
   }
 
   .footer {

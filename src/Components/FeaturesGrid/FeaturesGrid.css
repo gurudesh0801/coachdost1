@@ -9,10 +9,11 @@
 }
 
 .features-heading {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
   margin-bottom: 30px;
-  color: #333;
+  color: #524ca8;
+  font-family: "LT Avocado";
 }
 
 .grid1 {
@@ -45,6 +46,7 @@
 .grid-item h3 {
   font-size: 2rem;
   margin: auto;
+  color: #524ca8;
 }
 
 .grid-item p {
@@ -99,11 +101,11 @@
   }
 
   .features-heading {
-    font-size: 1.6rem;
+    font-size: 2.2rem;
   }
 
   .grid-item h3 {
-    font-size: 1rem;
+    font-size: 2rem;
   }
 
   .grid-item p {
@@ -114,14 +116,14 @@
 /* Very small screens (max-width: 480px) */
 @media (max-width: 480px) {
   .features-heading {
-    font-size: 1.5rem; /* Further reduce font size for very small screens */
+    font-size: 2rem; /* Further reduce font size for very small screens */
   }
 
   .grid-item h3 {
-    font-size: 0.9rem; /* Smaller heading on extra small screens */
+    font-size: 1.5rem; /* Smaller heading on extra small screens */
   }
 
   .grid-item p {
-    font-size: 0.7rem; /* Smaller text for extra small screens */
+    font-size: 1rem; /* Smaller text for extra small screens */
   }
 }

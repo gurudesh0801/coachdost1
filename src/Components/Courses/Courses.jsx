@@ -36,7 +36,7 @@ const Courses = () => {
           {courses.map((course, index) => (
             <div className={`course-card1`} key={index}>
               <div className="icon"></div>
-              <h2>{course.title}</h2>
+              <h2 className="cheading">{course.title}</h2>
               <p>{course.description}</p>
               <div className="card-footer">
                 <span className="price">{course.price}</span>

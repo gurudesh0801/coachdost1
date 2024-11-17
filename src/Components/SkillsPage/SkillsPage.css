@@ -30,12 +30,14 @@
 .text-section {
   flex: 1;
   text-align: left;
+  margin: auto;
 }
 
 .text-section h1 {
   color: #4a4a8e;
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 1rem;
+  font-family: "LT Avocado";
 }
 
 .text-section p {
@@ -48,6 +50,7 @@
 .button-group {
   display: flex;
   gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 .btn-primary {
