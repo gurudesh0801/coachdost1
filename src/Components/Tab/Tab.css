@@ -180,6 +180,10 @@
     width: 100%; /* Full width for images */
     height: auto; /* Adjust height for proportions */
   }
+  .card-image.slide-in {
+    transform: translateX(0); /* Move into its original position */
+    left: 0;
+  }
 
   .description {
     margin: 0 auto; /* Center within container */
@@ -207,27 +211,36 @@
 }
 
 /* Small Screens (576px and below) */
+/* Small Screens (576px and below) */
 @media (max-width: 576px) {
   .course-card2 {
     padding: 15px; /* Further reduce padding */
   }
 
   .card {
-    flex-direction: column; /* Stack image and text */
+    flex-direction: column; /* Stack image and text vertically */
     margin: 10px 0; /* Add spacing between stacked cards */
+    align-items: center; /* Center both the image and description */
+    justify-content: center; /* Center the content vertically */
   }
 
   .card-image {
-    width: 100%; /* Full width for small screens */
-    height: 200px; /* Consistent height */
-    object-fit: cover; /* Ensure proper image fit */
-    left: 0; /* Reset left offset */
+    width: 80%; /* Adjust image width to fit the screen */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure image covers the area without distortion */
+    margin: 0 auto; /* Center the image horizontally */
+    left: 0; /* Remove any previous left offset */
+    transform: none; /* Reset transform properties for centering */
+  }
+  .card-image.slide-in {
+    transform: translateX(0); /* Move into its original position */
+    left: 0;
   }
 
   .description {
-    width: 100%; /* Full width */
-    margin: 0 auto; /* Center alignment */
-    text-align: center; /* Center text alignment */
+    width: 100%; /* Full width for description */
+    margin: 0 auto; /* Center text */
+    text-align: center; /* Align text to the center */
   }
 
   .description h1 {
@@ -240,11 +253,12 @@
 
   .btn {
     font-size: 0.8rem; /* Compact button font */
-    padding: 6px 10px; /* Smaller button padding */
+    padding: 6px 10px; /* Adjust button padding */
   }
+
   .actions {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; /* Center the actions */
   }
 }
