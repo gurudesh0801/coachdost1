@@ -31,7 +31,7 @@
   left: -40%; /* Move the image 30% off to the left */
   width: 50rem; /* Maintain the image size */
   border-radius: 10px;
-  transform: translateX(-60%);
+  transform: translateX(-50%);
   object-fit: cover;
   box-shadow: 0 0 20px black;
   transition: transform 1s ease-out, opacity 1s ease-out;
