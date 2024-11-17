@@ -18,6 +18,7 @@ import Tab from "../Tab/Tab";
 import FeaturesGrid from "../FeaturesGrid/FeaturesGrid";
 import SkillsPage from "../SkillsPage/SkillsPage";
 import Courses from "../Courses/Courses";
+import Testimonials from "../Testimonials/Testimonials";
 
 const Home = () => {
   const coaches = [
@@ -81,6 +82,7 @@ const Home = () => {
       <FeaturesGrid />
       <SkillsPage />
       <Courses />
+      <Testimonials />
     </>
   );
 };

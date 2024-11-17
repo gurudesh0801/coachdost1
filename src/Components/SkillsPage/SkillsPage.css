@@ -10,7 +10,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  max-width: 1200px;
+  justify-content: space-around;
+  max-width: 1000px;
   gap: 2rem;
 }
 
@@ -32,7 +33,7 @@
 
 .text-section h1 {
   color: #4a4a8e;
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 
