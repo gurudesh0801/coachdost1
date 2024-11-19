@@ -14,7 +14,6 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/coaches/:id" element={<CoachProfileContainer />} />
       </Routes>
       <Footer />
       <StickyFooterBar />

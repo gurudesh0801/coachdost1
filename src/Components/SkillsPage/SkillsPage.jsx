@@ -12,13 +12,14 @@ const SkillsPage = () => {
         <div className="text-section">
           <h1>We help students grow their skills</h1>
           <p>
-            Advances that occur in the world of communication and information
-            technology raise new opportunities and challenges in the world of
-            education.
+            In a world shaped by rapid advances in communication and technology,
+            new opportunities are everywhere. At Coach Dost, we turn challenges
+            into stepping stones, empowering students to thrive in an
+            ever-changing educational landscape.
           </p>
           <div className="button-group">
-            <button className="btn-primary">Join course</button>
-            <button className="btn-secondary">Read more</button>
+            <button className="btn-primary">Join Now</button>
+            <button className="btn-secondary">Explore Courses</button>
           </div>
         </div>
       </div>

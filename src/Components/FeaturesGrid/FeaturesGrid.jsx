@@ -4,34 +4,34 @@ import "./FeaturesGrid.css";
 const FeaturesGrid = () => {
   const features = [
     {
-      title: "Schedule Learning",
+      title: "Expert Coaches",
       description:
         "Learn at whatever and whenever at your suitable time and place.",
       isHighlighted: true,
     },
     {
-      title: "Scholarship",
+      title: "24/7 Accessibility",
       description:
-        "To encourage talent, we give up to 100% aid to those young learners.",
+        " Work with highly experienced coaches specializing in diverse industries and languages.",
     },
     {
-      title: "Course Accessibility",
+      title: " End-to-End Solutions",
       description:
-        "Select a suitable course from the vast area of other courses.",
+        "A complete platform for all your coaching needs in one place.",
     },
     {
-      title: "Practical Learning",
+      title: "One-to-One Focus",
       description:
-        "Select a suitable course from the vast area of other courses.",
+        "Personalized sessions designed to help you achieve your unique goals.",
     },
     {
-      title: "Recorded Sessions",
+      title: "Accountability & Ownership",
       description:
-        "Don’t worry about it, access to every session on the chosen course.",
+        "We partner with you to track progress and ensure consistent growth.",
     },
     {
-      title: "Schedule Learning",
-      description: "Hold the opportunity to learn from the industry’s expert.",
+      title: "Confidentiality",
+      description: "A safe, secure space to stretch beyond your comfort zone.",
     },
   ];
 
@@ -49,6 +49,9 @@ const FeaturesGrid = () => {
               </div>
             ))}
           </div>
+          <h2 className="features-heading">
+            Ready to transform your life? Let’s get started today!
+          </h2>
         </div>
       </section>
     </>

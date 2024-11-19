@@ -43,8 +43,8 @@ const Tab = () => {
         <div className="description">
           <h1>The quickest and effective way for learning</h1>
           <p>
-            With online learning, interactions between teachers and students
-            will be more practical because they do not have to travel to meet.
+            Discover a 24/7 accessible platform with experienced coaches to
+            guide you every step of the way.
           </p>
           <div className="actions">
             <button className="btn join">Join course</button>

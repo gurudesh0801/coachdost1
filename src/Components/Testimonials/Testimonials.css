@@ -23,9 +23,10 @@
 }
 
 .testimonials-left h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 15px;
-  color: #333;
+  color: #524ca8;
+  font-family: "LT Avocado";
 }
 
 .testimonials-left p {

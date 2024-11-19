@@ -25,7 +25,7 @@ const Courses = () => {
   return (
     <>
       <div className="app">
-        <h1 className="heading">Find Courses</h1>
+        <h1 className="heading1">Explore Courses</h1>
         <div className="tabs">
           <span className="active-tab">Programming</span>
           <span>Language</span>
