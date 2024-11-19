@@ -1,4 +1,8 @@
 /* Hero Section General Styles */
+@font-face {
+  font-family: "LTAvocado"; /* Choose a name for the font */
+  src: url("../../assets/fonts/LTAvocado-Bold.ttf") format("truetype"); /* Adjust the path and format */
+}
 
 .hero-section {
   text-align: center;
@@ -18,7 +22,7 @@
 
 /* COACH and DOST Styling */
 .hero-text h1 {
-  font-family: "LT Avocado";
+  font-family: "LTAvocado";
   font-weight: 800;
   font-style: normal;
   font-size: 6.2rem;
