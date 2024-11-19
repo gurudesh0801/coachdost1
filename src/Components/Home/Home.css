@@ -2,8 +2,6 @@
 
 .hero-section {
   text-align: center;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .hero-text {
@@ -20,7 +18,7 @@
 
 /* COACH and DOST Styling */
 .hero-text h1 {
-  font-family: "LT Avocado";
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 800;
   font-style: normal;
   font-size: 6.2rem;
