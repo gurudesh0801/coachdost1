@@ -1,4 +1,8 @@
 /* General Styling */
+@font-face {
+  font-family: "LTAvocado"; /* Choose a name for the font */
+  src: url("../../assets/fonts/LTAvocado-Bold.ttf") format("truetype"); /* Adjust the path and format */
+}
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -15,7 +19,7 @@ body {
 
 /* Subscribe Section */
 .subscribe-section h2 {
-  font-family: "LT Avocado";
+  font-family: "LTAvocado";
   font-size: 3.5rem;
   margin: auto;
 }
@@ -85,7 +89,7 @@ body {
 .footer-text h3 {
   font-size: 2rem;
   color: #524ca8;
-  font-family: "LT Avocado";
+  font-family: "LTAvocado";
 }
 
 .footer-text p {

@@ -1,4 +1,8 @@
 /* Original CSS */
+@font-face {
+  font-family: "LTAvocado"; /* Choose a name for the font */
+  src: url("../../assets/fonts/LTAvocado-Bold.ttf") format("truetype"); /* Adjust the path and format */
+}
 .features-grid {
   text-align: center;
   padding: 20px;
@@ -13,7 +17,7 @@
   font-weight: bold;
   margin-bottom: 30px;
   color: #524ca8;
-  font-family: "LT Avocado";
+  font-family: "LTAvocado";
 }
 
 .grid1 {

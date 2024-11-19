@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "LTAvocado"; /* Choose a name for the font */
+  src: url("../../assets/fonts/LTAvocado-Bold.ttf") format("truetype"); /* Adjust the path and format */
+}
+
 .app {
   text-align: center;
   padding: 20px;
@@ -9,7 +14,7 @@
   font-size: 3rem;
   margin-bottom: 20px;
   color: #524ca8;
-  font-family: "LT Avocado";
+  font-family: "LTAvocado";
 }
 
 /* Tabs Section */
@@ -126,7 +131,7 @@
 
   .heading {
     font-size: 1.8rem;
-    font-family: "LT Avocado";
+    font-family: "LTAvocado";
   }
 
   .price {
@@ -146,7 +151,7 @@
 
   .heading {
     font-size: 2rem;
-    font-family: "LT Avocado";
+    font-family: "LTAvocado";
   }
 }
 
@@ -163,7 +168,7 @@
 
   .heading {
     font-size: 2.2rem;
-    font-family: "LT Avocado";
+    font-family: "LTAvocado";
   }
 }
 

@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "LTAvocado"; /* Choose a name for the font */
+  src: url("../../assets/fonts/LTAvocado-Bold.ttf") format("truetype"); /* Adjust the path and format */
+}
 .course-card2 {
   position: relative;
   top: -7rem;
@@ -60,7 +64,7 @@
   margin: 0;
   font-size: 4rem;
   color: #524ca8;
-  font-family: "LT Avocado";
+  font-family: "LTAvocado";
   line-height: 1;
 }
 

@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "LTAvocado"; /* Choose a name for the font */
+  src: url("../../assets/fonts/LTAvocado-Bold.ttf") format("truetype"); /* Adjust the path and format */
+}
 .testimonials-container {
   display: flex;
   flex-wrap: wrap;
@@ -26,7 +30,7 @@
   font-size: 3rem;
   margin-bottom: 15px;
   color: #524ca8;
-  font-family: "LT Avocado";
+  font-family: "LTAvocado";
 }
 
 .testimonials-left p {
