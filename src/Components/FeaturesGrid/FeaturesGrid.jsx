@@ -49,7 +49,7 @@ const FeaturesGrid = () => {
               </div>
             ))}
           </div>
-          <h2 className="features-heading">
+          <h2 className="features-lower-heading">
             Ready to transform your life? Let’s get started today!
           </h2>
         </div>

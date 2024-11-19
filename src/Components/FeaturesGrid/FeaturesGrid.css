@@ -13,7 +13,14 @@
 }
 
 .features-heading {
-  font-size: 3rem;
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #524ca8;
+  font-family: "LTAvocado";
+}
+.features-lower-heading {
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 30px;
   color: #524ca8;

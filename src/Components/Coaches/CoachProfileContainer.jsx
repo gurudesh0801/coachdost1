@@ -63,7 +63,7 @@ export default function CoachProfileContainer() {
           ref={imgRef}
           className={isVisible ? "visible" : ""}
         />
-        <h1>Your growth, our priority—anytime, anywhere.</h1>
+        <h1>Your growth, our priority anytime, anywhere.</h1>
       </div>
     </>
   );

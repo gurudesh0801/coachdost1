@@ -30,29 +30,24 @@ function Navbar() {
       {/* Centered Navigation Links */}
       <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
         <li>
-          <Link to="/" onClick={toggleMenu}>
-            Home
-          </Link>
-        </li>
-        <li>
           <Link to="#why" onClick={toggleMenu}>
-            Why CoachDost?
+            Explore Coaches
           </Link>
         </li>
         <li>
           <Link to="#services" onClick={toggleMenu}>
-            Services
+            About us
           </Link>
         </li>
         <li>
           <Link to="#contact" onClick={toggleMenu}>
-            Contact
+            Why us?
           </Link>
         </li>
       </ul>
       <div className="left-button">
+        <button className="demo-button">Join Now</button>
         <button className="demo-button">Login</button>
-        <button className="demo-button">Sign Up</button>
       </div>
 
       {/* Hamburger Icon */}

@@ -70,10 +70,7 @@ const Home = () => {
               <span className="coach">COACH</span>
               <span className="dost">DOST</span>
             </h1>
-            <p>
-              Transform Your Life With Personalised Coaching And Valuable
-              Guidance
-            </p>
+            <p>Your Transformation Journey Begins Here</p>
           </div>
         </div>
         <div
