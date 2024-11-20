@@ -1,11 +1,12 @@
 /* Hero Section General Styles */
 @font-face {
-  font-family: "LTAvocado"; /* Choose a name for the font */
-  src: url("../../assets/fonts/LTAvocado-Bold.ttf") format("truetype"); /* Adjust the path and format */
+  font-family: "LTAvocado";
+  src: url("../../assets/fonts/LTAvocado-Bold.ttf") format("truetype");
 }
 
 .hero-section {
   text-align: center;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .hero-text {
@@ -13,11 +14,14 @@
   max-width: 550px;
   margin: auto;
   padding: 20px;
+  animation: slideIn 1s ease-out;
 }
+
 .texts {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  animation: fadeInUp 1.5s ease-in-out;
 }
 
 /* COACH and DOST Styling */
@@ -30,14 +34,17 @@
   margin: 0;
   margin-top: -3rem;
   color: #524ca8;
+  animation: slideInLeft 1.5s ease-out;
 }
 
 .coach {
   margin-right: 2rem;
+  animation: fadeInLeft 2s ease-in-out;
 }
 
 .dost {
   display: block;
+  animation: fadeInRight 2s ease-in-out;
 }
 
 /* Tagline Styling */
@@ -51,17 +58,22 @@
   line-height: 1.2;
   max-width: 270px;
   text-align: left;
-}
-.cylindrical-container {
-  perspective: 1000px; /* Adds depth perspective */
+  animation: fadeInUp 1s ease-in-out;
 }
 
+/* Cylindrical Container */
+.cylindrical-container {
+  perspective: 1000px;
+}
+
+/* Swiper Styles */
 .mySwiper {
   width: 100%;
   height: 100%;
   max-width: 1200px;
   padding: 50px 0;
   box-sizing: border-box;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .mySwiper .swiper-slide {
@@ -76,11 +88,12 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   margin-bottom: 20rem;
+  animation: slideInUp 1s ease-out;
 }
 
 .mySwiper .swiper-slide-active {
-  transform: translateY(100rem); /* Moves the middle image upward */
-  z-index: 2; /* Ensures the active slide is above the others */
+  transform: translateY(100rem);
+  z-index: 2;
   transition: transform 0.3s ease-in-out, z-index 0.3s ease-in-out;
 }
 
@@ -97,7 +110,9 @@
   height: 100%;
   object-fit: cover;
   border-radius: inherit;
-  transition: transform 0.3s ease;
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out; /* Smooth transition */
+  opacity: 0; /* Start as invisible */
+  animation: fadeInImage 1.5s ease-out forwards; /* Fade in and move */
 }
 
 .mySwiper .swiper-slide:hover {
@@ -108,6 +123,7 @@
 .swiper-pagination-bullet {
   background-color: #333;
   opacity: 0.7;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .swiper-pagination-bullet-active {
@@ -117,8 +133,8 @@
 
 /* Link Styling */
 .mySwiper .swiper-slide a {
-  text-decoration: none; /* Remove underline from the link */
-  color: inherit; /* Inherit color to avoid text color change */
+  text-decoration: none;
+  color: inherit;
 }
 
 /* Small devices (landscape phones, 576px and below) */
@@ -136,6 +152,7 @@
   .hero-text h1 {
     font-size: 3.5rem;
     margin-top: -3rem;
+    animation: slideInUp 1s ease-in-out;
   }
 
   .hero-text .texts p {
@@ -143,11 +160,14 @@
     text-align: center;
     max-width: 100%;
     margin: 10px 0;
+    animation: fadeInUp 1s ease-in-out;
   }
 
   .coach {
     margin-right: 0;
+    animation: fadeInLeft 1.5s ease-in-out;
   }
+
   .dost {
     text-align: center;
   }
@@ -156,6 +176,7 @@
     flex-direction: column;
     justify-content: center;
   }
+
   .mySwiper {
     padding: 30px 0;
   }
@@ -166,7 +187,7 @@
   }
 
   .swiper-pagination {
-    display: none; /* Hide pagination for small screens */
+    display: none;
   }
 }
 
@@ -190,6 +211,7 @@
     font-size: 1.6rem;
     max-width: 90%;
     text-align: center;
+    animation: fadeInUp 1s ease-in-out;
   }
 
   .texts {
@@ -197,8 +219,9 @@
     align-items: center;
     margin-top: 2rem;
   }
+
   .mySwiper {
-    padding: 30px 0; /* Adjust padding for smaller screens */
+    padding: 30px 0;
   }
 
   .mySwiper .swiper-slide {
@@ -207,7 +230,7 @@
   }
 
   .swiper-pagination {
-    display: block; /* Show pagination for medium screens */
+    display: block;
   }
 }
 
@@ -216,6 +239,7 @@
   .hero-text h1 {
     font-size: 2.8rem;
   }
+
   .mySwiper .swiper-slide {
     width: 240px;
     height: 280px;
@@ -225,12 +249,8 @@
     font-size: 1.2rem;
   }
 
-  /* Slider Settings for large screens */
-  .hero-slider .slider-item {
-    padding: 0 5px;
-  }
   .swiper-pagination {
-    display: block; /* Ensure pagination is visible */
+    display: block;
   }
 }
 
@@ -248,11 +268,6 @@
     font-size: 1.3rem;
   }
 
-  /* Slider image size adjustments */
-  .hero-slider .slider-item img {
-    border-radius: 10px;
-  }
-
   .mySwiper .swiper-slide {
     width: 280px;
     height: 320px;
@@ -260,5 +275,81 @@
 
   .swiper-pagination {
     display: block;
+  }
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInImage {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
