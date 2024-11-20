@@ -32,20 +32,47 @@
   overflow: visible; /* Allow overflow for the image */
 }
 
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%); /* Start fully off-screen to the left */
+    opacity: 0; /* Invisible initially */
+  }
+  to {
+    transform: translateX(-10%); /* End at the intended position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
 .card-image {
   position: relative;
-  left: -40%; /* Move the image 30% off to the left */
-  width: 50rem; /* Maintain the image size */
+  left: -40%; /* Offset to align within the parent container */
+  width: 50rem; /* Maintain size */
   border-radius: 10px;
-  transform: translateX(-50%);
   object-fit: cover;
   box-shadow: 0 0 20px black;
-  transition: transform 1s ease-out, opacity 1s ease-out;
+  opacity: 0; /* Initially hidden */
+  transform: translateX(-50%); /* Off-screen to the left */
+  transition: opacity 0.5s ease-out; /* Smooth fade-in */
 }
+
 .card-image.slide-in {
-  transform: translateX(-50%); /* Move into its original position */
-  left: -40%;
+  animation: slideInFromLeft 1.5s ease-out forwards; /* Trigger animation */
 }
+@keyframes textSlideIn {
+  from {
+    transform: translateX(50px); /* Start slightly below its position */
+    opacity: 0; /* Start invisible */
+  }
+  to {
+    transform: translateY(0); /* End in its original position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+.text-slide-in {
+  animation: textSlideIn 2s ease-out forwards; /* Trigger the animation */
+}
+
 .card-info h3 {
   margin: 0;
   font-size: 1.5rem;

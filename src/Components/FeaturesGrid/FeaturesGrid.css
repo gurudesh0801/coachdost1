@@ -100,12 +100,12 @@
 .grid-item {
   opacity: 0; /* Make all items invisible initially */
   transform: translateY(20px); /* Position them slightly below */
-  transition: opacity 2s ease-out, transform 0.3s ease-out;
+  transition: opacity 1s ease-out, transform 0.3s ease-out;
 }
 
 /* Apply animation to grid items when visible */
 .slide-in {
-  animation: slideIn 2s ease-out forwards;
+  animation: slideIn 1s ease-out forwards;
   /* Delay is set dynamically via inline styles */
   opacity: 0; /* Ensure the item is visible */
 }
