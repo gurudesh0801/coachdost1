@@ -83,6 +83,33 @@
 .grid-item:hover .icon-circle {
   background: #ffffff;
 }
+/* Keyframes for sliding in */
+/* Keyframes for sliding in */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px); /* Start slightly below */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Settle in original position */
+  }
+}
+
+/* Slide-in animation with delay support */
+.grid-item {
+  opacity: 0; /* Make all items invisible initially */
+  transform: translateY(20px); /* Position them slightly below */
+  transition: opacity 2s ease-out, transform 0.3s ease-out;
+}
+
+/* Apply animation to grid items when visible */
+.slide-in {
+  animation: slideIn 2s ease-out forwards;
+  /* Delay is set dynamically via inline styles */
+  opacity: 1; /* Ensure the item is visible */
+}
+
 /* Responsive CSS */
 
 /* Medium screens (max-width: 1024px) */
