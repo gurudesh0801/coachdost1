@@ -2,19 +2,6 @@
   font-family: "LTAvocado"; /* Choose a name for the font */
   src: url("../../assets/fonts/LTAvocado-Bold.ttf") format("truetype"); /* Adjust the path and format */
 }
-
-/* Keyframe animation for text */
-@keyframes textSlideIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px); /* Start from below */
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0); /* End at its original position */
-  }
-}
-
 .course-card2 {
   position: relative;
   top: -7rem;
@@ -55,12 +42,10 @@
   box-shadow: 0 0 20px black;
   transition: transform 1s ease-out, opacity 1s ease-out;
 }
-
 .card-image.slide-in {
-  transform: translateX(0%); /* Move into its original position */
+  transform: translateX(-50%); /* Move into its original position */
   left: -40%;
 }
-
 .card-info h3 {
   margin: 0;
   font-size: 1.5rem;
@@ -70,36 +55,17 @@
 .card-info p {
   margin: 5px 0 0;
   color: #777;
-  animation: textSlideIn 1.2s ease-out forwards; /* Add animation to the text */
 }
-
 .description {
   margin-left: -15rem;
   width: 40%;
 }
-
 .description h1 {
   margin: 0;
   font-size: 4rem;
   color: #524ca8;
   font-family: "LTAvocado";
   line-height: 1;
-}
-
-.text-slide-in {
-  opacity: 1;
-  transform: translateX(0);
-  animation: textSlideIn 2s ease-out forwards;
-}
-@keyframes textSlideIn {
-  from {
-    opacity: 0;
-    transform: translateX(100px); /* Starts below */
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0); /* Ends in the original position */
-  }
 }
 
 .description p {
@@ -137,7 +103,6 @@
 .btn:hover {
   opacity: 0.9;
 }
-
 /* Responsive Breakpoints */
 
 /* Large Screens (1200px and below) */
@@ -253,6 +218,7 @@
   }
 }
 
+/* Small Screens (576px and below) */
 /* Small Screens (576px and below) */
 @media (max-width: 576px) {
   .course-card2 {

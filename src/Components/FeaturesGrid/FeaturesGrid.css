@@ -107,7 +107,7 @@
 .slide-in {
   animation: slideIn 2s ease-out forwards;
   /* Delay is set dynamically via inline styles */
-  opacity: 1; /* Ensure the item is visible */
+  opacity: 0; /* Ensure the item is visible */
 }
 
 /* Responsive CSS */
