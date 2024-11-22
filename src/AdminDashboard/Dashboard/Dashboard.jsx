@@ -14,24 +14,26 @@ const Dashboard = () => {
     <div>
       <Sidebar />
       <Header />
-      <div className="dashboard-container">
-        <FeesCollection />
-        <Complaints />
+      <div className="main-container">
+        <div className="dashboard-container">
+          <FeesCollection />
+          <Complaints />
+        </div>
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "20px",
+            padding: "20px",
+          }}
+          className="down-sec"
+        >
+          <LeadsTracking />
+          <EmployeeAbsent />
+          <Defaulters />
+        </div>
+        <HighestConversion />
       </div>
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          gap: "20px",
-          padding: "20px",
-        }}
-        className="down-sec"
-      >
-        <LeadsTracking />
-        <EmployeeAbsent />
-        <Defaulters />
-      </div>
-      <HighestConversion />
     </div>
   );
 };
