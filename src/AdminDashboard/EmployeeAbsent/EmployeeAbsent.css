@@ -1,0 +1,76 @@
+.employee-absent {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 500px; /* Limit the width for better responsiveness */
+  margin: auto;
+}
+
+.employee-absent ul {
+  list-style: none;
+  padding: 0;
+}
+
+.employee-absent li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap; /* Adjust content wrapping for smaller screens */
+  gap: 10px;
+}
+
+.employee-absent strong {
+  display: block;
+  font-weight: bold;
+  color: #333;
+}
+
+.employee-absent p {
+  margin: 0;
+  color: #555;
+  font-size: 14px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .employee-absent {
+    padding: 15px;
+    max-width: 90%; /* Allow the component to take up more space on smaller screens */
+  }
+
+  .employee-absent li {
+    padding: 8px;
+    flex-direction: column; /* Stack the content vertically for narrow screens */
+    align-items: flex-start;
+  }
+
+  .employee-absent strong {
+    font-size: 14px;
+  }
+
+  .employee-absent p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .employee-absent {
+    padding: 10px;
+  }
+
+  .employee-absent li {
+    margin-bottom: 8px;
+    padding: 5px;
+  }
+
+  .employee-absent strong {
+    font-size: 12px;
+  }
+
+  .employee-absent p {
+    font-size: 12px;
+  }
+}

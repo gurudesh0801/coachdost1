@@ -1,0 +1,80 @@
+.complaints {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  flex: 1; /* Smaller width compared to Fees Collection */
+}
+
+.complaints h3 {
+  color: #4c4cb4;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.complaint-summary {
+  display: flex;
+  gap: 10px;
+}
+
+.complaint-box {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.complaint-box.closed {
+  background-color: #eafaea;
+  color: #28a745;
+}
+
+.complaint-box.open {
+  background-color: #fff4e6;
+  color: #ffa502;
+}
+
+.complaint-box.new {
+  background-color: #fdeaea;
+  color: #ff4757;
+}
+
+.complaint-box p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.complaint-box strong {
+  display: block;
+  font-size: 24px;
+}
+
+/* Responsive styling */
+@media (max-width: 1024px) {
+  .complaints {
+    flex: 1; /* Adjust to equal size with Fees Collection */
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .complaints {
+    width: 100%; /* Full width on small screens */
+    margin: 10px 0;
+  }
+
+  .complaint-summary {
+    flex-wrap: wrap; /* Stack complaint boxes */
+  }
+
+  .complaint-box {
+    flex: none;
+    width: 48%; /* Two per row */
+  }
+
+  .complaint-box strong {
+    font-size: 20px;
+  }
+}

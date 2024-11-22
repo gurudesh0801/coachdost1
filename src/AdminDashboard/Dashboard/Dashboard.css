@@ -1,0 +1,42 @@
+.dashboard-container {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+.down-sec {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  align-self: flex-end;
+  gap: 10px;
+  justify-content: space-around; /* Ensures even distribution of items */
+}
+
+.down-sec > div {
+  /* flex: 1; */
+  flex: 3;
+  min-width: 300px; /* Prevents items from shrinking too much */
+  max-width: 48%; /* Items take up half the width on larger screens */
+  background-color: #ffffff; /* Optional: white background for individual cards */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for card separation */
+  padding: 15px;
+  box-sizing: border-box; /* Ensures consistent padding */
+}
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column; /* Stack components vertically */
+    margin: auto;
+  }
+  .down-sec {
+    flex-direction: column; /* Stack items vertically */
+    gap: 15px; /* Maintain a small gap between stacked items */
+    padding: 10px;
+  }
+
+  .down-sec > div {
+    min-width: 100%; /* Take full width of the container */
+  }
+}

@@ -1,6 +1,10 @@
-// src/App.js
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
 import "./App.css";
 import Home from "./Components/Home/Home";
@@ -8,16 +12,24 @@ import CoachProfileContainer from "./Components/Coaches/CoachProfileContainer";
 import Footer from "./Components/Footer/Footer";
 import StickyFooterBar from "./Components/StickyFooterBar/StickyFooterBar";
 import Loading from "./Components/Loading/Loading";
+import Signup from "./Components/Signup/Signup";
+import Dashboard from "./AdminDashboard/Dashboard/Dashboard";
 
 const AppContent = () => {
+  const location = useLocation(); // Get the current location (path)
+
+  // Check if the current route is the admin dashboard
+  const isAdminRoute = location.pathname === "/admindashboard";
+
   return (
     <>
-      <Navbar />
+      {!isAdminRoute && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/admindashboard" element={<Dashboard />} />
       </Routes>
-      <Footer />
-      <StickyFooterBar />
+      {!isAdminRoute && <Footer />} <StickyFooterBar />
     </>
   );
 };
@@ -28,6 +40,7 @@ function App() {
   const handleAnimationEnd = () => {
     setIsLoading(false);
   };
+
   return (
     <Router>
       {isLoading ? (

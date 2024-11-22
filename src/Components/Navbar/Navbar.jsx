@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
+import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const goto = () => {
+    navigate("/signup");
+  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -46,7 +51,9 @@ function Navbar() {
         </li>
       </ul>
       <div className="left-button">
-        <button className="demo-button">Join Now</button>
+        <button onClick={goto} className="demo-button">
+          Join Now
+        </button>
         <button className="demo-button">Login</button>
       </div>
 

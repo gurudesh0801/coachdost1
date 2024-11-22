@@ -1,0 +1,38 @@
+.fees-collection {
+  background-color: #5050ff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  flex: 2; /* Ensures larger width compared to Complaints */
+}
+
+.fees-collection h3 {
+  color: #ffffff;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.fees-details {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.fees-details strong {
+  color: #ffffff;
+}
+
+/* Responsive styling */
+@media (max-width: 1024px) {
+  .fees-collection {
+    flex: 1; /* Adjust to equal size with Complaints */
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .fees-collection {
+    width: 100%; /* Full width on small screens */
+    margin: 10px 0;
+  }
+}

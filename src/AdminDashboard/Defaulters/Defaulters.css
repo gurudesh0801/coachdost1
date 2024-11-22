@@ -1,0 +1,96 @@
+.defaulters {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 500px; /* Restrict width for better responsiveness */
+  margin: auto;
+}
+
+.defaulters ul {
+  list-style: none;
+  padding: 0;
+}
+
+.defaulters li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Ensure proper alignment */
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+  gap: 10px; /* Add spacing between flex items */
+}
+
+.defaulter-details {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Allow the details section to expand */
+}
+
+.defaulter-details strong {
+  font-weight: bold;
+  color: #333;
+}
+
+.defaulter-details p {
+  margin: 0;
+  color: #555;
+  font-size: 14px;
+}
+
+.defaulters .action {
+  flex-shrink: 0; /* Prevent the action part from shrinking */
+  font-size: 14px;
+  color: #ff5f5f; /* Highlight the action text (e.g., attendance/fees) */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .defaulters {
+    padding: 15px;
+    max-width: 90%; /* Use a more fluid layout for smaller screens */
+  }
+
+  .defaulters li {
+    flex-direction: column; /* Stack content vertically */
+    align-items: flex-start; /* Align items to the left */
+    padding: 8px;
+  }
+
+  .defaulter-details strong {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .defaulter-details p {
+    font-size: 13px;
+  }
+
+  .defaulters .action {
+    font-size: 13px;
+    margin-top: 5px; /* Add spacing from the details */
+  }
+}
+
+@media (max-width: 480px) {
+  .defaulters {
+    padding: 10px;
+  }
+
+  .defaulters li {
+    padding: 6px;
+  }
+
+  .defaulter-details strong {
+    font-size: 12px;
+  }
+
+  .defaulter-details p {
+    font-size: 12px;
+  }
+
+  .defaulters .action {
+    font-size: 12px;
+  }
+}

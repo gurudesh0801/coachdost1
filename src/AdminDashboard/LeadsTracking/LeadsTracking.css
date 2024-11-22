@@ -1,0 +1,66 @@
+.leads-tracking {
+  max-width: 500px;
+  background-color: #f6f6fb;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  padding: 20px;
+}
+
+.leads-progress {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #4c4cb4;
+  border-radius: 5px;
+}
+
+.leads-stats {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping of stats */
+  justify-content: space-between;
+  gap: 10px; /* Adds spacing between items */
+}
+
+.leads-stats div {
+  flex: 1 1 calc(50% - 10px); /* Two items per row with gap adjustment */
+  text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .leads-tracking {
+    max-width: 90%; /* Take up more width on smaller screens */
+    padding: 15px;
+  }
+
+  .leads-stats {
+    gap: 5px; /* Reduce gap for smaller screens */
+  }
+
+  .leads-stats div {
+    flex: 1 1 calc(100% - 5px); /* Stack each stat on top of each other */
+  }
+}
+
+@media (max-width: 480px) {
+  .leads-tracking {
+    padding: 10px;
+  }
+
+  .progress-bar {
+    height: 8px; /* Slightly reduce progress bar height */
+  }
+}

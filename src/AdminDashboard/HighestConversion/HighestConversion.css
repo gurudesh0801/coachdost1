@@ -1,0 +1,67 @@
+.highest-conversion {
+  background-color: #f6f6fb;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 500px; /* Restrict width for better responsiveness */
+  margin: auto;
+}
+
+.conversion-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center the items vertically */
+  gap: 10px; /* Add spacing between items */
+}
+
+.conversion-data div {
+  text-align: center;
+  flex: 1; /* Allow items to share available space equally */
+}
+
+.conversion-data div strong {
+  display: block;
+  font-size: 16px;
+  color: #333;
+}
+
+.conversion-data div p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .highest-conversion {
+    padding: 15px;
+    max-width: 90%; /* Use a more fluid layout for smaller screens */
+  }
+
+  .conversion-data {
+    flex-direction: column; /* Stack the data vertically */
+    gap: 15px; /* Add more spacing between stacked items */
+  }
+
+  .conversion-data div strong {
+    font-size: 14px; /* Reduce font size for smaller screens */
+  }
+
+  .conversion-data div p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .highest-conversion {
+    padding: 10px;
+  }
+
+  .conversion-data div strong {
+    font-size: 12px;
+  }
+
+  .conversion-data div p {
+    font-size: 12px;
+  }
+}
